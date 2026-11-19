@@ -1,0 +1,76 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="3.DiagnosticsACFPACFLjungBoxADF.js" />
+	<help file="3.DiagnosticsACFPACFLjungBoxADF.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+	</logic>
+	<dialog label="3. Diagnostics (ACF/PACF, Ljung-Box, ADF)">
+		<row id="row_vDDDDTSOST">
+			<varselector id="diag_vs" />
+			<column id="clm_tDDDDTSOST">
+				<tabbook>
+					<tab label="Data &amp; Differencing" id="tab_DtDffrnc">
+						<column id="clm_vTSOSTOSTO">
+							<varslot id="diag_ts" label="Time Series Object (ts)" source="diag_vs" classes="ts" required="true" />
+							<frame label="Stationarity Transformations (Optional)" id="frm_SttnrtTO">
+								<checkbox id="diag_log" label="Apply Log Transformation (log) before differencing" value="1" />
+								<spinbox label="Regular Differencing Order (d)" id="diag_diff" min="0" max="3" type="integer" />
+								<spinbox label="Seasonal Differencing Order (D)" id="diag_sdiff" min="0" max="2" type="integer" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Tests &amp; Plots" id="tab_TstsPlts">
+						<column id="clm_rDPTFDSACF">
+							<radio id="diag_plot_type" label="Diagnostic Plot Type">
+								<option label="Full Display (Series + ACF + PACF)" value="display" checked="true" />
+								<option label="ACF Plot Only (Autocorrelation)" value="acf" />
+								<option label="PACF Plot Only (Partial Autocorrelation)" value="pacf" />
+							</radio>
+							<spinbox label="Max Lags for Plots &amp; Ljung-Box (0 = Auto)" id="diag_lags" min="0" max="120" type="integer" />
+							<frame label="Statistical Hypothesis Tests" id="frm_SttstcHT">
+								<checkbox id="diag_chk_lb" label="Ljung-Box Test (Autocorrelation / White Noise)" value="1" checked="true" />
+								<checkbox id="diag_chk_adf" label="Augmented Dickey-Fuller Test (ADF - Stationarity)" value="1" checked="true" />
+								<checkbox id="diag_chk_kpss" label="KPSS Test (Level/Trend Stationarity)" value="1" checked="true" />
+							</frame>
+							<dropdown id="diag_theme" label="Plot Theme (ggplot2)">
+								<option label="Minimal (Clean business look)" value="minimal" checked="true" />
+								<option label="Classic (Scientific)" value="classic" />
+								<option label="Black &amp; White (Grid)" value="bw" />
+							</dropdown>
+							<input label="Main Title (For ACF/PACF Only - Leave empty for default)" id="diag_plot_main" />
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Output" id="tab_Output">
+						<column id="clm_fSTSSTSSHT">
+							<frame label="Save Transformed Series" id="frm_SvTrnsfS">
+								<saveobject label="Save transformed/differenced series (ts) as" checkable="true" initial="ts_diag" id="diag_save_ts" />
+							</frame>
+							<frame label="HTML Graphics Size &amp; Resolution" id="frm_HTMLGrSR">
+								<row id="row_sHTMLPW900">
+									<spinbox label="HTML Plot Width (pixels)" id="diag_plot_w" initial="900" min="100" max="5000" type="integer" />
+									<spinbox label="HTML Plot Height (pixels)" id="diag_plot_h" initial="650" min="100" max="5000" type="integer" />
+									<spinbox label="Resolution (DPI)" id="diag_plot_res" initial="120" min="72" max="600" type="integer" />
+								</row>
+							</frame>
+							<frame label="Save Plot Object" id="frm_SvPltObj">
+								<saveobject label="Save Plot Object as" checkable="true" initial="diag_plot" id="diag_plot_save" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+				</tabbook>
+				<preview label="Preview Diagnostic Plot" id="prv_PrvwDgnP" />
+			</column>
+		</row>
+	</dialog>
+</document>

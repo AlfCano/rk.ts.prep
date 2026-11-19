@@ -1,0 +1,69 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<caption id="tab_DtDffrnc" />
+		<setting id="diag_ts">
+		</setting>
+		<caption id="frm_SttnrtTO" />
+		<setting id="diag_log">
+		</setting>
+		<setting id="diag_diff">
+		</setting>
+		<setting id="diag_sdiff">
+		</setting>
+		<caption id="tab_TstsPlts" />
+		<setting id="diag_plot_type">
+		</setting>
+		<setting id="diag_lags">
+		</setting>
+		<caption id="frm_SttstcHT" />
+		<setting id="diag_chk_lb">
+		</setting>
+		<setting id="diag_chk_adf">
+		</setting>
+		<setting id="diag_chk_kpss">
+		</setting>
+		<setting id="diag_theme">
+		</setting>
+		<setting id="diag_plot_main">
+		</setting>
+		<caption id="tab_Output" />
+		<caption id="frm_SvTrnsfS" />
+		<setting id="diag_save_ts">
+		</setting>
+		<caption id="frm_HTMLGrSR" />
+		<setting id="diag_plot_w">
+		</setting>
+		<setting id="diag_plot_h">
+		</setting>
+		<setting id="diag_plot_res">
+		</setting>
+		<caption id="frm_SvPltObj" />
+		<setting id="diag_plot_save">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

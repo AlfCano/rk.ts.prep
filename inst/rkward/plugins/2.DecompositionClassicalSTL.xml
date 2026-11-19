@@ -1,0 +1,77 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="2.DecompositionClassicalSTL.js" />
+	<help file="2.DecompositionClassicalSTL.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<convert id="cond_stl" sources="dec_method.string" mode="equals" standard="stl" />
+		<connect governor="cond_stl" client="frm_stl_opts.enabled" />
+		<connect governor="dec_stl_periodic.state.not" client="dec_stl_swin.enabled" />
+	</logic>
+	<dialog label="2. Decomposition (Classical &amp; STL)">
+		<row id="row_vDMDMTSODM">
+			<varselector id="dec_vs" />
+			<column id="clm_tDMDMTSODM">
+				<tabbook>
+					<tab label="Data &amp; Method" id="tab_DataMthd">
+						<column id="clm_vTSODMSTLL">
+							<varslot id="dec_ts" label="Time Series Object (ts)" source="dec_vs" classes="ts" required="true" />
+							<radio id="dec_method" label="Decomposition Method">
+								<option label="STL (LOESS Seasonal-Trend Decomposition) - Recommended" value="stl" checked="true" />
+								<option label="Classical Additive (Trend + Seasonal + Random)" value="additive" />
+								<option label="Classical Multiplicative (Trend * Seasonal * Random)" value="multiplicative" />
+							</radio>
+							<frame label="STL Specific Options" id="frm_stl_opts">
+								<checkbox id="dec_stl_periodic" label="Periodic seasonal window (s.window = 'periodic')" value="TRUE" checked="true" />
+								<spinbox label="Custom s.window (odd integer &gt;= 7)" id="dec_stl_swin" initial="13" min="7" max="99" type="integer" />
+								<checkbox id="dec_stl_robust" label="Robust fitting (resistant to outliers)" value="TRUE" checked="true" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Plot Options" id="tab_PltOptns">
+						<column id="clm_fPCPCPT2MC">
+							<frame label="Plot Customization" id="frm_PltCstmz">
+								<dropdown id="dec_theme" label="Plot Theme (ggplot2)">
+									<option label="Minimal (Clean business look)" value="minimal" checked="true" />
+									<option label="Classic (Scientific)" value="classic" />
+									<option label="Black &amp; White (Grid)" value="bw" />
+								</dropdown>
+								<input label="Main Title (Leave empty for default)" id="dec_plot_main" />
+								<input label="X-Axis Label (Leave empty for default)" id="dec_plot_xlab" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Output" id="tab_Output">
+						<column id="clm_fSOWSOWSSS">
+							<frame label="Save Objects to Workspace" id="frm_SvObjctW">
+								<saveobject label="Save decomposed object as" checkable="true" initial="ts_decomp" id="dec_save" />
+								<saveobject label="Save Seasonally Adjusted series (ts) as" checkable="true" initial="ts_seas_adj" id="dec_save_adj" />
+							</frame>
+							<frame label="HTML Graphics Size &amp; Resolution" id="frm_HTMLGrSR">
+								<row id="row_sHTMLPW800">
+									<spinbox label="HTML Plot Width (pixels)" id="dec_plot_w" initial="800" min="100" max="5000" type="integer" />
+									<spinbox label="HTML Plot Height (pixels)" id="dec_plot_h" initial="650" min="100" max="5000" type="integer" />
+									<spinbox label="Resolution (DPI)" id="dec_plot_res" initial="120" min="72" max="600" type="integer" />
+								</row>
+							</frame>
+							<frame label="Save Plot Object" id="frm_SvPltObj">
+								<saveobject label="Save Plot (ggplot2) as" checkable="true" initial="decomp_plot" id="dec_plot_save" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+				</tabbook>
+				<preview label="Preview Decomposition Plot" id="prv_PrvwDcmP" />
+			</column>
+		</row>
+	</dialog>
+</document>

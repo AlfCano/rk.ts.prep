@@ -1,0 +1,100 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="1.DefineSeriesImputeData.js" />
+	<help file="1.DefineSeriesImputeData.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<connect governor="prep_df.available" client="prep_vs.root" />
+		<convert id="cond_freq_cust" sources="prep_freq.string" mode="equals" standard="custom" />
+		<connect governor="cond_freq_cust" client="prep_freq_cust.enabled" />
+	</logic>
+	<dialog label="1. Define Series &amp; Impute Data">
+		<row id="row_vDSDSDFTVN">
+			<varselector id="prep_vs" />
+			<column id="clm_tDSDSDFTVN">
+				<tabbook>
+					<tab label="Data &amp; Structure" id="tab_DtStrctr">
+						<column id="clm_vDFTVNTSST">
+							<varslot id="prep_df" label="Data Frame" source="prep_vs" classes="data.frame" required="true" />
+							<varslot id="prep_var" label="Target Variable (Numeric)" source="prep_vs" classes="numeric integer" required="true" />
+							<frame label="Time Series Structure" id="frm_TmSrsStr">
+								<dropdown id="prep_freq" label="Data Frequency (Seasonality)">
+									<option label="Monthly (12)" value="12" checked="true" />
+									<option label="Quarterly (4)" value="4" />
+									<option label="Yearly (1)" value="1" />
+									<option label="Weekly (52)" value="52" />
+									<option label="Daily - Business Week (5)" value="5" />
+									<option label="Daily - Full Week (7)" value="7" />
+									<option label="Custom Frequency" value="custom" />
+								</dropdown>
+								<spinbox label="Custom Frequency (Periods per cycle)" id="prep_freq_cust" initial="24" min="1" max="1000" type="integer" />
+								<row id="row_sSYMC20201">
+									<spinbox label="Start Year / Major Cycle" id="prep_start_yr" initial="2020" min="1" max="3000" type="integer" />
+									<spinbox label="Start Period (e.g., 1 for Jan/Q1)" id="prep_start_pd" initial="1" min="1" max="1000" type="integer" />
+								</row>
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Imputation (NAs)" id="tab_ImpttnNA">
+						<column id="clm_fMDHTSMDHT">
+							<frame label="Missing Data Handling (imputeTS)" id="frm_MssnDHTS">
+								<radio id="prep_imp_method" label="Missing Value (NA) Imputation Method">
+									<option label="No imputation (Keep original NAs)" value="none" checked="true" />
+									<option label="Linear Interpolation (na_interpolation)" value="linear" />
+									<option label="Spline Interpolation (na_interpolation - spline)" value="spline" />
+									<option label="Kalman Smoothing (na_kalman - StructTS)" value="kalman" />
+									<option label="Seasonal Decomposition + Interpolation (na_seadec)" value="seadec" />
+									<option label="Last Observation Carried Forward (na_locf)" value="locf" />
+								</radio>
+								<checkbox id="prep_trim" label="Trim leading and trailing NAs before creating series" value="1" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Plot Options" id="tab_PltOptns">
+						<column id="clm_fPCPCPT2MC">
+							<frame label="Plot Customization" id="frm_PltCstmz">
+								<dropdown id="prep_theme" label="Plot Theme (ggplot2)">
+									<option label="Minimal (Clean business look)" value="minimal" checked="true" />
+									<option label="Classic (Scientific)" value="classic" />
+									<option label="Black &amp; White (Grid)" value="bw" />
+								</dropdown>
+								<input label="Main Title (Leave empty for default)" id="prep_plot_main" />
+								<input label="X-Axis Label (Leave empty for default)" id="prep_plot_xlab" />
+								<input label="Y-Axis Label (Leave empty for default)" id="prep_plot_ylab" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Output" id="tab_Output">
+						<column id="clm_fSTSWSTSWS">
+							<frame label="Save Time Series to Workspace" id="frm_SvTmSrsW">
+								<saveobject label="Save Time Series (ts) object as" checkable="true" checked="true" initial="ts_clean" id="prep_save" />
+							</frame>
+							<frame label="HTML Graphics Size &amp; Resolution" id="frm_HTMLGrSR">
+								<row id="row_sHTMLPW800">
+									<spinbox label="HTML Plot Width (pixels)" id="prep_plot_w" initial="800" min="100" max="5000" type="integer" />
+									<spinbox label="HTML Plot Height (pixels)" id="prep_plot_h" initial="600" min="100" max="5000" type="integer" />
+									<spinbox label="Resolution (DPI)" id="prep_plot_res" initial="120" min="72" max="600" type="integer" />
+								</row>
+							</frame>
+							<frame label="Save Plot Object" id="frm_SvPltObj">
+								<saveobject label="Save Plot (ggplot2) as" checkable="true" initial="prep_plot" id="prep_plot_save" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+				</tabbook>
+				<preview label="Preview Series / Imputation Plot" id="prv_PrvwSrIP" />
+			</column>
+		</row>
+	</dialog>
+</document>

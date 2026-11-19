@@ -1,0 +1,21 @@
+Package: rk.ts.prep
+Type: Package
+Title: Time Series Preparation, Imputation (imputeTS), Decomposition
+        (STL/Classical), and Diagnostics (ACF/PACF, ADF, KPSS,
+        Ljung-Box).
+Version: 0.0.1
+Date: 2026-11-18
+Author: Alfonso Cano
+Maintainer: Alfonso Cano <alfonso.cano@correo.buap.mx>
+Depends: R (>= 4.0.0)
+Suggests: imputeTS, forecast, tseries, ggplot2
+Enhances: rkward
+Description: Time Series Preparation, Imputation (imputeTS),
+        Decomposition (STL/Classical), and Diagnostics (ACF/PACF, ADF,
+        KPSS, Ljung-Box).
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyLoad: yes
+URL: https://github.com/AlfCano/rk.ts.prep
+Authors@R: person(given="Alfonso", family="Cano",
+        email="alfonso.cano@correo.buap.mx", role=c("aut", "cre"))

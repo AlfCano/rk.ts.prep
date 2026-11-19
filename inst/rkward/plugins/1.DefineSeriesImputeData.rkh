@@ -1,0 +1,73 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<caption id="tab_DtStrctr" />
+		<setting id="prep_df">
+		</setting>
+		<setting id="prep_var">
+		</setting>
+		<caption id="frm_TmSrsStr" />
+		<setting id="prep_freq">
+		</setting>
+		<setting id="prep_freq_cust">
+		</setting>
+		<setting id="prep_start_yr">
+		</setting>
+		<setting id="prep_start_pd">
+		</setting>
+		<caption id="tab_ImpttnNA" />
+		<caption id="frm_MssnDHTS" />
+		<setting id="prep_imp_method">
+		</setting>
+		<setting id="prep_trim">
+		</setting>
+		<caption id="tab_PltOptns" />
+		<caption id="frm_PltCstmz" />
+		<setting id="prep_theme">
+		</setting>
+		<setting id="prep_plot_main">
+		</setting>
+		<setting id="prep_plot_xlab">
+		</setting>
+		<setting id="prep_plot_ylab">
+		</setting>
+		<caption id="tab_Output" />
+		<caption id="frm_SvTmSrsW" />
+		<setting id="prep_save">
+		</setting>
+		<caption id="frm_HTMLGrSR" />
+		<setting id="prep_plot_w">
+		</setting>
+		<setting id="prep_plot_h">
+		</setting>
+		<setting id="prep_plot_res">
+		</setting>
+		<caption id="frm_SvPltObj" />
+		<setting id="prep_plot_save">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

@@ -1,0 +1,65 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<caption id="tab_DataMthd" />
+		<setting id="dec_ts">
+		</setting>
+		<setting id="dec_method">
+		</setting>
+		<caption id="frm_stl_opts" />
+		<setting id="dec_stl_periodic">
+		</setting>
+		<setting id="dec_stl_swin">
+		</setting>
+		<setting id="dec_stl_robust">
+		</setting>
+		<caption id="tab_PltOptns" />
+		<caption id="frm_PltCstmz" />
+		<setting id="dec_theme">
+		</setting>
+		<setting id="dec_plot_main">
+		</setting>
+		<setting id="dec_plot_xlab">
+		</setting>
+		<caption id="tab_Output" />
+		<caption id="frm_SvObjctW" />
+		<setting id="dec_save">
+		</setting>
+		<setting id="dec_save_adj">
+		</setting>
+		<caption id="frm_HTMLGrSR" />
+		<setting id="dec_plot_w">
+		</setting>
+		<setting id="dec_plot_h">
+		</setting>
+		<setting id="dec_plot_res">
+		</setting>
+		<caption id="frm_SvPltObj" />
+		<setting id="dec_plot_save">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

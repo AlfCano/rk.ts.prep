@@ -1,0 +1,264 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.ts.prep 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-18 18:00+0000\n"
+"PO-Revision-Date: 2026-11-18 18:44-0600\n"
+"Last-Translator: Alfonso Cano <alfonso.cano@correo.buap.mx>\n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+# ================= MENÚS Y PESTAÑAS =================
+msgid "Time Series Preparation"
+msgstr "Preparação de Séries Temporais"
+
+msgid "1. Define Series & Impute Data"
+msgstr "1. Definir Série e Imputar Dados"
+
+msgid "2. Decomposition (Classical & STL)"
+msgstr "2. Decomposição (Clássica e STL)"
+
+msgid "3. Diagnostics (ACF/PACF, Ljung-Box, ADF)"
+msgstr "3. Diagnósticos (FAC/FACP, Ljung-Box, ADF)"
+
+msgid "Data & Structure"
+msgstr "Dados e Estrutura"
+
+msgid "Imputation (NAs)"
+msgstr "Imputação (NAs)"
+
+msgid "Plot Options"
+msgstr "Opções de Gráfico"
+
+msgid "Output"
+msgstr "Saída"
+
+msgid "Data & Method"
+msgstr "Dados e Método"
+
+msgid "Data & Differencing"
+msgstr "Dados e Diferenciação"
+
+msgid "Tests & Plots"
+msgstr "Testes e Gráficos"
+
+# ================= MÓDULO 1 =================
+msgid "Data Frame"
+msgstr "Tabela de Dados (data.frame)"
+
+msgid "Target Variable (Numeric)"
+msgstr "Variável Alvo (Numérica)"
+
+msgid "Data Frequency (Seasonality)"
+msgstr "Frequência dos Dados (Sazonalidade)"
+
+msgid "Monthly (12)"
+msgstr "Mensal (12)"
+
+msgid "Quarterly (4)"
+msgstr "Trimestral (4)"
+
+msgid "Yearly (1)"
+msgstr "Anual (1)"
+
+msgid "Weekly (52)"
+msgstr "Semanal (52)"
+
+msgid "Daily - Business Week (5)"
+msgstr "Diária - Semana Útil (5)"
+
+msgid "Daily - Full Week (7)"
+msgstr "Diária - Semana Completa (7)"
+
+msgid "Custom Frequency"
+msgstr "Frequência Personalizada"
+
+msgid "Custom Frequency (Periods per cycle)"
+msgstr "Frequência Personalizada (Períodos por ciclo)"
+
+msgid "Start Year / Major Cycle"
+msgstr "Ano Inicial / Ciclo Maior"
+
+msgid "Start Period (e.g., 1 for Jan/Q1)"
+msgstr "Período Inicial (ex. 1 para Jan/T1)"
+
+msgid "Time Series Structure"
+msgstr "Estrutura da Série Temporal"
+
+msgid "Missing Value (NA) Imputation Method"
+msgstr "Método de Imputação de Ausentes (NA)"
+
+msgid "No imputation (Keep original NAs)"
+msgstr "Sem imputação (Manter NAs originais)"
+
+msgid "Linear Interpolation (na_interpolation)"
+msgstr "Interpolação Linear (na_interpolation)"
+
+msgid "Spline Interpolation (na_interpolation - spline)"
+msgstr "Interpolação Spline (na_interpolation - spline)"
+
+msgid "Kalman Smoothing (na_kalman - StructTS)"
+msgstr "Suavização de Kalman (na_kalman - StructTS)"
+
+msgid "Seasonal Decomposition + Interpolation (na_seadec)"
+msgstr "Decomposição Sazonal + Interpolação (na_seadec)"
+
+msgid "Last Observation Carried Forward (na_locf)"
+msgstr "Última Observação Repetida (na_locf)"
+
+msgid "Trim leading and trailing NAs before creating series"
+msgstr "Remover NAs iniciais e finais antes de criar a série"
+
+msgid "Missing Data Handling (imputeTS)"
+msgstr "Tratamento de Dados Ausentes (imputeTS)"
+
+msgid "Save Time Series (ts) object as"
+msgstr "Salvar objeto Série Temporal (ts) como"
+
+msgid "Save Time Series to Workspace"
+msgstr "Salvar Série Temporal no Workspace"
+
+msgid "Preview Series / Imputation Plot"
+msgstr "Pré-visualizar Gráfico de Série / Imputação"
+
+# ================= MÓDULO 2 =================
+msgid "Time Series Object (ts)"
+msgstr "Objeto de Série Temporal (ts)"
+
+msgid "Decomposition Method"
+msgstr "Método de Decomposição"
+
+msgid "STL (LOESS Seasonal-Trend Decomposition) - Recommended"
+msgstr "STL (Decomposição Sazonal-Tendência LOESS) - Recomendado"
+
+msgid "Classical Additive (Trend + Seasonal + Random)"
+msgstr "Clássica Aditiva (Tendência + Sazonalidade + Resíduo)"
+
+msgid "Classical Multiplicative (Trend * Seasonal * Random)"
+msgstr "Clássica Multiplicativa (Tendência * Sazonalidade * Resíduo)"
+
+msgid "Periodic seasonal window (s.window = 'periodic')"
+msgstr "Janela sazonal periódica (s.window = 'periodic')"
+
+msgid "Custom s.window (odd integer >= 7)"
+msgstr "s.window personalizada (inteiro ímpar >= 7)"
+
+msgid "Robust fitting (resistant to outliers)"
+msgstr "Ajuste robusto (resistente a outliers)"
+
+msgid "STL Specific Options"
+msgstr "Opções Específicas STL"
+
+msgid "Save decomposed object as"
+msgstr "Salvar objeto decomposto como"
+
+msgid "Save Seasonally Adjusted series (ts) as"
+msgstr "Salvar série dessazonalizada (ts) como"
+
+msgid "Save Objects to Workspace"
+msgstr "Salvar Objetos no Workspace"
+
+msgid "Preview Decomposition Plot"
+msgstr "Pré-visualizar Gráfico de Decomposição"
+
+# ================= MÓDULO 3 =================
+msgid "Apply Log Transformation (log) before differencing"
+msgstr "Aplicar transformação logarítmica (log) antes de diferenciar"
+
+msgid "Regular Differencing Order (d)"
+msgstr "Ordem de Diferenciação Regular (d)"
+
+msgid "Seasonal Differencing Order (D)"
+msgstr "Ordem de Diferenciação Sazonal (D)"
+
+msgid "Stationarity Transformations (Optional)"
+msgstr "Transformações de Estacionariedade (Opcional)"
+
+msgid "Diagnostic Plot Type"
+msgstr "Tipo de Gráfico Diagnóstico"
+
+msgid "Full Display (Series + ACF + PACF)"
+msgstr "Exibição Completa (Série + FAC + FACP)"
+
+msgid "ACF Plot Only (Autocorrelation)"
+msgstr "Apenas Gráfico FAC (Autocorrelação)"
+
+msgid "PACF Plot Only (Partial Autocorrelation)"
+msgstr "Apenas Gráfico FACP (Autocorrelação Parcial)"
+
+msgid "Max Lags for Plots & Ljung-Box (0 = Auto)"
+msgstr "Defasagens Máximas para Gráficos e Ljung-Box (0 = Auto)"
+
+msgid "Ljung-Box Test (Autocorrelation / White Noise)"
+msgstr "Teste de Ljung-Box (Autocorrelação / Ruído Branco)"
+
+msgid "Augmented Dickey-Fuller Test (ADF - Stationarity)"
+msgstr "Teste Dickey-Fuller Aumentado (ADF - Estacionariedade)"
+
+msgid "KPSS Test (Level/Trend Stationarity)"
+msgstr "Teste KPSS (Estacionariedade em Nível/Tendência)"
+
+msgid "Statistical Hypothesis Tests"
+msgstr "Testes Estatísticos de Hipótese"
+
+msgid "Main Title (For ACF/PACF Only - Leave empty for default)"
+msgstr "Título Principal (Apenas FAC/FACP - Vazio = padrão)"
+
+msgid "Save transformed/differenced series (ts) as"
+msgstr "Salvar série transformada/diferenciada (ts) como"
+
+msgid "Save Transformed Series"
+msgstr "Salvar Série Transformada"
+
+msgid "Save Plot Object as"
+msgstr "Salvar Objeto Gráfico como"
+
+msgid "Preview Diagnostic Plot"
+msgstr "Pré-visualizar Gráfico Diagnóstico"
+
+# ================= COMPARTIDOS =================
+msgid "Plot Theme (ggplot2)"
+msgstr "Tema do Gráfico (ggplot2)"
+
+msgid "Minimal (Clean business look)"
+msgstr "Minimalista (Visual executivo limpo)"
+
+msgid "Classic (Scientific)"
+msgstr "Clássico (Científico)"
+
+msgid "Black & White (Grid)"
+msgstr "Preto e Branco (Grade)"
+
+msgid "Main Title (Leave empty for default)"
+msgstr "Título Principal (Deixe vazio para o padrão)"
+
+msgid "X-Axis Label (Leave empty for default)"
+msgstr "Rótulo do Eixo X (Deixe vazio para o padrão)"
+
+msgid "Y-Axis Label (Leave empty for default)"
+msgstr "Rótulo do Eixo Y (Deixe vazio para o padrão)"
+
+msgid "Plot Customization"
+msgstr "Personalização do Gráfico"
+
+msgid "HTML Plot Width (pixels)"
+msgstr "Largura do Gráfico HTML (pixels)"
+
+msgid "HTML Plot Height (pixels)"
+msgstr "Altura do Gráfico HTML (pixels)"
+
+msgid "Resolution (DPI)"
+msgstr "Resolução (DPI)"
+
+msgid "HTML Graphics Size & Resolution"
+msgstr "Tamanho e Resolução de Gráficos HTML"
+
+msgid "Save Plot (ggplot2) as"
+msgstr "Salvar Gráfico (ggplot2) como"
+
+msgid "Save Plot Object"
+msgstr "Salvar Objeto Gráfico"
